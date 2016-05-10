@@ -1,3 +1,13 @@
+---
+title: Pigeons NYC
+author: "editor@mozzarella.website" 
+date: "May 4, 2016"
+output: github_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 ## Mapping the pigeon complaints of New York City, 2010 - early 2016
 
 I came across a dataset in Jeremy Singer-Vine's [weekly email](https://tinyletter.com/data-is-plural), comprised of all reported rat sightings in New York City. Going further I found a _wealth of data_ on complaints made to various NYC agencies, all through the 311 Service Requests system. [NYC Open Data](https://nycopendata.socrata.com/data) is a beautiful thing.
