@@ -129,7 +129,7 @@ points(wasteProj, pch = 20, col = "#00000030", cex = 0.8)
 points(odorProj, pch = 1, col = "#00000050", cex = 1.6)
 ```
 
-![](nyc311-Pigeons_files/figure-markdown_github/black%20and%20white-1.png)<!-- -->
+![](nyc311-Pigeons_files/figure-markdown_github/black%20and%20white-1.png)
 
 OK! Maybe time to bring in some shapefiles. There are some great ones from nyc.gov with many parameters, but they do take quite some time to load. Also, they use a different CRS than Google Maps and [OpenStreetMap](https://www.openstreetmap.org/).
 
