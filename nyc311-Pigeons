@@ -1,0 +1,167 @@
+# Pigeon Complaints
+# Mapping out where it happens in NYC
+# Zoo York - Concrete Jungle
+# NYC Open Data - 311 Service Requests
+
+# https://nycopendata.socrata.com/
+# http://www1.nyc.gov/site/planning/data-maps/open-data/districts-download-metadata.page
+
+# Import Select and Filter ----------------------------------------------------
+pigeon <- read.csv("~/Documents/R6/data/contains_pigeon.csv")
+head(pigeon)
+summary(pigeon)
+
+# separate pigeon odor from pigeon waste
+library(dplyr)
+
+# narrow down variable columns
+pigeonID <- select(pigeon, Descriptor, Longitude, Latitude)
+
+# get long/lat coordinates by filtered Descriptor values
+filter(pigeonID, pigeonID$Descriptor != "Pigeon Waste")
+odor<- filter(pigeonID, pigeonID$Descriptor != "Pigeon Waste")
+waste <- filter(pigeonID, pigeonID$Descriptor != "Pigeon Odor")
+
+# assign by borough
+bk_odor <- filter(odor, odor$Borough == "Brooklyn")
+bx_odor <- filter(odor, odor$Borough == "Bronx")
+mn_odor <- filter(odor, odor$Borough == "Manhattan")
+qn_odor <- filter(odor, odor$Borough == "Queens")
+si_odor <- filter(odor, odor$Borough == "Staten Island")
+
+bk_waste <- filter(waste, waste$Borough == "Brooklyn")
+bx_waste <- filter(waste, waste$Borough == "Bronx")
+mn_waste <- filter(waste, waste$Borough == "Manhattan")
+qn_waste <- filter(waste, waste$Borough == "Queens")
+si_waste <- filter(waste, waste$Borough == "Staten Island")
+
+
+## Five Boroughs Floating -----------------------------------------------------
+## Plot
+library(mapproj)
+
+waste <- mapproject(waste$Longitude, waste$Latitude, projection = "albers",
+                           parameters = c(39, 45))
+
+odor <- mapproject(odor$Longitude, odor$Latitude, projection = "albers",
+                           parameters = c(39, 45))
+
+par(mar=c(0, 0 , 0, 0), family="HersheySans", las = 1)
+plot(waste, asp = 1, type = "n", bty = "n", 
+	xlab="", ylab="", axes=FALSE)
+
+points(waste, pch = 4, col = "goldenrod1", cex = 0.8)
+points(dor, pch = 1, col = "olivedrab4", cex = 1.4)
+points(odor, pch = 20, col = "olivedrab", cex = 1)
+
+# now try a black and white one
+par(mar=c(0, 0 , 0, 0), family="HersheySans", las = 1)
+plot(waste, asp = 1, type = "n", bty = "n", xlab="", ylab="", axes=FALSE)
+
+points(waste, pch = 20, col = "black", cex = 1)
+points(odor, pch = 1, col = "black", cex = 1.4)
+points(odor, pch = 1, col = "black", cex = 0.8)
+
+## Five Borough Breakdown -----------------------------------------------------
+
+library(maptools)
+
+# reading in 3 shapefiles with New York State parameters
+# for each borough, will set bounding boxes accordingly working off the same shps
+
+admin <- readShapeLines("data/nyc-shp/ny_admin.shp")
+coast <- readShapeLines("data/nyc-shp/ny_coast.shp")
+natural <- readShapeLines("data/nyc-shp/ny_natural.shp")
+
+# Brooklyn ------------------------------------------------
+
+par(mar=c(8, 6, 4, 4), bty="o", family="HersheySans")
+
+plot(0, 0, type="n", asp=1, las = 1, axes=TRUE, 
+	xlim=c(-74.05663, -73.833365), 
+	ylim=c(40.551042, 40.739446), 
+    xlab="Longitude", ylab="Latitude", 
+    cex.lab=0.8, cex.axis=0.6, 
+    font.lab=2, font.axis=2)
+
+lines(admin, lwd=0.2, col="grey10")
+lines(natural, lwd = 0.4, col = "peachpuff3")
+lines(coast, lwd = 0.6, col = "cadetblue")
+
+points(bk_waste$Longitude, bk_waste$Latitude, 
+	pch = 20, col = "orange3", cex = 0.6)
+points(bk_odor$Longitude, bk_odor$Latitude, 
+	pch = 1, col = "firebrick3", cex = 1.8)
+
+# Queens --------------------------------------------------
+
+plot(0, 0, type="n", asp = 1, axes=TRUE, las = 1, 
+	xlim=c(-74.042112, -73.700272), 
+	ylim=c(40.525, 40.812242), 
+    xlab="Longitude", ylab="Latitude", 
+    cex.axis=0.6)
+
+lines(admin, lwd=0.2, col="grey10")
+lines(natural, lwd = 0.4, col = "peachpuff3")
+lines(coast, lwd = 0.6, col = "cadetblue")
+
+
+points(qn_waste$Longitude, qn_waste$Latitude, 
+	pch = 20, col = "orange3", cex = 0.6)
+points(qn_odor$Longitude, qnodor$Latitude, 
+	pch = 1, col = "firebrick3", cex = 1.8)
+
+title(main="Pigeon Waste and Pigeon Odor Complaints: Queens", 
+      col.main="black", font.main=2, cex.main=1.1,
+      sub="source: NYC Open Data; 311 Service Requests, 2010-2015", 
+      col.sub="black", font.sub=4, cex.sub=1)
+
+# Manhattan -----------------------------------------------
+
+par(bty="o", family="HersheySans",)
+
+plot(0, 0, type="n", asp = 1, axes=TRUE, 
+	xlim=c(-74.047285, -73.907), 
+    ylim=c(40.680396, 40.882214), 
+    xlab=NA, ylab=NA)
+
+lines(admin, lwd=0.2, col="grey10")
+lines(natural, lwd = 0.4, col = "peachpuff3")
+lines(coast, lwd = 0.6, col = "cadetblue")
+
+points(mn_waste$Longitude, mn_waste$Latitude, 
+	pch = 20, col = "black", cex = 0.6)
+points(mn_odor$Longitude, mn_odor$Latitude, 
+	pch = 1, col = "black", cex = 1.8)
+
+# Bronx ---------------------------------------------------
+
+plot(0, 0, type="n", asp = 1, axes=TRUE, 
+	xlim=c(-74.047285, -73.907), ## GET THE CORRECT BOUNDING BOX HERE BOUNDING BOX HERE
+    ylim=c(40.680396, 40.882214), 
+    xlab=NA, ylab=NA)
+
+lines(admin, lwd=0.2, col="grey10")
+lines(natural, lwd = 0.4, col = "peachpuff3")
+lines(coast, lwd = 0.6, col = "cadetblue")
+
+points(bx_waste$Longitude, bx_waste$Latitude, 
+	pch = 20, col = "black", cex = 0.6)
+points(bx_odor$Longitude, bx_odor$Latitude, 
+	pch = 1, col = "black", cex = 1.8)
+
+# Staten Island -------------------------------------------
+
+plot(0, 0, type="n", asp = 1, axes=TRUE, 
+	xlim=c(-74.047285, -73.907), ## GET THE CORRECT BOUNDING BOX HERE BOUNDING BOX HERE
+    ylim=c(40.680396, 40.882214), 
+    xlab=NA, ylab=NA)
+
+lines(admin, lwd=0.2, col="grey10")
+lines(natural, lwd = 0.4, col = "peachpuff3")
+lines(coast, lwd = 0.6, col = "cadetblue")
+
+points(si_waste$Longitude, si_waste$Latitude, 
+	pch = 20, col = "black", cex = 0.6)
+points(si_odor$Longitude, si_odor$Latitude, 
+	pch = 1, col = "black", cex = 1.8)
