@@ -12,7 +12,10 @@ _Mapping the pigeon complaints of New York City, 2010 - early 2016_
 This is a little side project from my class 
 [Foundations of Data Science](https://www.springboard.com/workshops/data-science). It's done in R, to explore the spatial libraries and work with shapefiles, as well as publicly available data from New York City. 
 
-An example plot of Brooklyn - Pigeon Waste complaint coordinates in orange, and Pigeon Odor complaint coordinates in red. 
+An example plot of Brooklyn - 
+
+- Pigeon Waste complaint coordinates in orange.
+- Pigeon Odor complaint coordinates in red.
 
 ![Brooklyn Pigeon Complain Coordinates](nyc311-Pigeons_files/figure-markdown_github/BK-1.png)
 
