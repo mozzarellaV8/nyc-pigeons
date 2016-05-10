@@ -12,6 +12,8 @@ output: github_document
 This is a little side project from my class 
 [Foundations of Data Science](https://www.springboard.com/workshops/data-science). It's done in R, to explore the spatial libraries and work with shapefiles, as well as publicly available data from New York City. 
 
+example: Brooklyn: 
+![Brooklyn Pigeon Complain Coordinates](nyc311-Pigeons_files/figure-markdown_github/BK-1.png)
 
 ### how this came about
 
