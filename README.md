@@ -5,17 +5,18 @@ date: "May 4, 2016"
 output: github_document
 ---
 
-### what this is
+### Basic Mapping in R with NYC Open Data
 
-"Mapping the pigeon complaints of New York City, 2010 - early 2016"
+_Mapping the pigeon complaints of New York City, 2010 - early 2016_
 
 This is a little side project from my class 
 [Foundations of Data Science](https://www.springboard.com/workshops/data-science). It's done in R, to explore the spatial libraries and work with shapefiles, as well as publicly available data from New York City. 
 
-example: Brooklyn: 
+An example plot of Brooklyn - Pigeon Waste complaint coordinates in orange, and Pigeon Odor complaint coordinates in red. 
+
 ![Brooklyn Pigeon Complain Coordinates](nyc311-Pigeons_files/figure-markdown_github/BK-1.png)
 
-### how this came about
+### How this came about~
 
 I came across a dataset in Jeremy Singer-Vine's [weekly email](https://tinyletter.com/data-is-plural), comprised of all reported rat sightings in New York City. Going further I found a _wealth of data_ on complaints made to various NYC agencies, all through the 311 Service Requests system. [NYC Open Data](https://nycopendata.socrata.com/data) is a beautiful thing.
 
