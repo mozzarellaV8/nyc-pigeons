@@ -16,18 +16,7 @@ Filtering the data from the source using Socrata's API - limiting the results to
 
 ![New York isn't the only city with this problem.](http://pi.mozzarella.website/pigeon-rat.jpg) 
 
-Anyways! Here is just some spatial EDA with the data - mostly to learn a bit about the maptools library and RMarkdown. It is still a work in progress and am hoping to refine spatial parameters and understanding in the coming weeks. 
-
-Quick note on Coordinate Reference Systems (CRS) in shapefiles:
-
-- WGS84 EPSG 4326 - used by Google Earth, Open Street Map, most GPS Systems
-  
-- WGS84 EPSG 3857 - used by Google Maps, Open Street Map. Mercator Projection.
-  
-- NADS83 EPSG 4269 - used by nyc.gov and many other state/federal agencies.
-    
-Also, [here](https://nycopendata.socrata.com/profile/mozzarella/hch9-rjwu) are a few more of my filtered sets of data from NYC Open Data. Also findable at [Socrata NYC](https://nycopendata.socrata.com/), username _mozzarella_. Again just some work in progress here! 
-A little EDA - on the side - from my class 
+A little side project EDA from my class 
 [Foundations of Data Science](https://www.springboard.com/workshops/data-science).
 
 ## sources and resources
@@ -38,11 +27,3 @@ A little EDA - on the side - from my class
 - [Data is Plural](https://tinyletter.com/data-is-plural)
 - my mentor Julian for my [Foundations of Data Science](https://www.springboard.com/workshops/data-science) class
 - [Open Street Map](http://openstreetmapdata.com/)
-
-## a look at the data - descriptions
-```{r load data, message=FALSE}
-pigeon <- read.csv("data/contains_pigeon.csv")
-summary(pigeon$Descriptor)
-```
-
-Odor and Waste, eh? It'd be nice to make a map of these points wouldn't it? Maybe we can find where the highest density of pigeon shit in New York is. The dataset provides latitude and longitude coordinates for the location of each complaint - service request - filed. It also provides columns for Complaint Types and descriptions of these complaints - pretty fine by my (still learning) standards. 
