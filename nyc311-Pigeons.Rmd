@@ -5,7 +5,7 @@ date: "May 4, 2016"
 output: github_document
 ---
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(include = FALSE)
 ```
 
 ## Mapping the pigeon complaints of New York City, 2010 - early 2016
