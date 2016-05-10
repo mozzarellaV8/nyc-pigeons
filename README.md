@@ -21,7 +21,7 @@ An example plot of Brooklyn -
 
 ### Plots and Process
 
-[nyc311-Pigeons.md](https://github.com/mozzarellaV8/nyc-pigeons/blob/first/nyc311-Pigeons.md)
+can be viewed here: [nyc311-Pigeons.md](https://github.com/mozzarellaV8/nyc-pigeons/blob/first/nyc311-Pigeons.md)
 
 ### How this came about~
 
