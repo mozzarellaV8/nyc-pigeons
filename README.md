@@ -16,6 +16,10 @@ An example plot of Brooklyn - Pigeon Waste complaint coordinates in orange, and 
 
 ![Brooklyn Pigeon Complain Coordinates](nyc311-Pigeons_files/figure-markdown_github/BK-1.png)
 
+### Plots and Process
+
+[nyc311-Pigeons.md](https://github.com/mozzarellaV8/nyc-pigeons/blob/first/nyc311-Pigeons.md)
+
 ### How this came about~
 
 I came across a dataset in Jeremy Singer-Vine's [weekly email](https://tinyletter.com/data-is-plural), comprised of all reported rat sightings in New York City. Going further I found a _wealth of data_ on complaints made to various NYC agencies, all through the 311 Service Requests system. [NYC Open Data](https://nycopendata.socrata.com/data) is a beautiful thing.
