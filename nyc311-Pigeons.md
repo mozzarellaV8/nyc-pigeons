@@ -3,7 +3,7 @@ Pigeons NYC
 <editor@mozzarella.website>
 May 4, 2016
 
-Mapping the pigeon complaints of New York City, 2010 - early 2016
+Mapping pigeon complaints of New York City, 2010 - early 2016
 -----------------------------------------------------------------
 
 I came across a dataset in Jeremy Singer-Vine's [weekly email](https://tinyletter.com/data-is-plural), comprised of all reported rat sightings in New York City. Going further I found a *wealth of data* on complaints made to various NYC agencies, all through the 311 Service Requests system. [NYC Open Data](https://nycopendata.socrata.com/data) is a beautiful thing.
@@ -111,7 +111,7 @@ points(odorProj, pch = 1, col = "#698B2275", cex = 1.6)
 points(odorProj, pch = 1, col = "#6B8E2375", cex = 1.2)
 ```
 
-![](nyc311-Pigeons_files/figure-markdown_github/plot%20data-1.png)<!-- -->
+![](nyc311-Pigeons_files/figure-markdown_github/plot%20data-1.png)
 
 Goldenrod represents Waste, and the olivedrabs represent Odor. Plotted the pigeon odor points twice for two reasons:
 
