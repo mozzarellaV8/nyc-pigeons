@@ -137,7 +137,7 @@ points(mn_odor$Longitude, mn_odor$Latitude,
 # Bronx ---------------------------------------------------
 
 plot(0, 0, type="n", asp = 1, axes=TRUE, 
-	xlim=c(-74.047285, -73.907), ## GET THE CORRECT BOUNDING BOX HERE BOUNDING BOX HERE
+	xlim=c(-74.047285, -73.907)
     ylim=c(40.680396, 40.882214), 
     xlab=NA, ylab=NA)
 
@@ -153,7 +153,7 @@ points(bx_odor$Longitude, bx_odor$Latitude,
 # Staten Island -------------------------------------------
 
 plot(0, 0, type="n", asp = 1, axes=TRUE, 
-	xlim=c(-74.047285, -73.907), ## GET THE CORRECT BOUNDING BOX HERE BOUNDING BOX HERE
+	xlim=c(-74.047285, -73.907)
     ylim=c(40.680396, 40.882214), 
     xlab=NA, ylab=NA)
 
