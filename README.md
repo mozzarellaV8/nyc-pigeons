@@ -51,7 +51,7 @@ Filtering the data from the source using Socrata's API - limiting the results to
 
 - how much waste warrants a call to 311?
 - as with many 311 calls, many complaints are lodged from the area surrounding Central Park. 
-In regard to this specific situation, does the historic and high rise architecture surrounding the park come into play?
+In regard to pigeons specifically, does the historic and high rise architecture surrounding the park come into play?
 - how much waste warrants a legitimate threat to health? 
 - beyond the Upper East/West sides, who calls the most about waste? about odor?
 - what does this odor smell like? 
