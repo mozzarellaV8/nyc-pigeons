@@ -17,8 +17,8 @@ pigeon <- read.csv("~/Github/nyc-pigeons/data/contains_pigeon.csv")
 summary(pigeon$Descriptor)
 ```
 	       N/A  Pigeon Odor Pigeon Waste 
-           1          312         3580
-           
+           1          	312         3580
+
 An example plot of Brooklyn - 
 
 - Pigeon Waste complaint coordinates in orange.
