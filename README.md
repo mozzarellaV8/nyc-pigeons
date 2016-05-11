@@ -12,6 +12,11 @@ _Mapping the pigeon complaints of New York City, 2010 - early 2016_
 This is a little side project from my class 
 [Foundations of Data Science](https://www.springboard.com/workshops/data-science). It's done in R, to explore the spatial libraries and work with shapefiles, as well as publicly available data from New York City. 
 
+``` r
+pigeon <- read.csv("~/Github/nyc-pigeons/data/contains_pigeon.csv")
+summary(pigeon$Descriptor)
+```
+
 An example plot of Brooklyn - 
 
 - Pigeon Waste complaint coordinates in orange.
