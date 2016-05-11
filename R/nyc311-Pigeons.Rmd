@@ -41,7 +41,7 @@ A little EDA - on the side - from my class
 
 ## a look at the data - descriptions
 ```{r load data, message=FALSE}
-pigeon <- read.csv("data/contains_pigeon.csv")
+pigeon <- read.csv("~/Github/nyc-pigeons/data/contains_pigeon.csv")
 summary(pigeon$Descriptor)
 ```
 
