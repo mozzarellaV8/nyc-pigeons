@@ -1,10 +1,3 @@
----
-title: Pigeons NYC
-author: "editor@mozzarella.website" 
-date: "May 4, 2016"
-output: github_document
----
-
 ### Basic Mapping in R with NYC Open Data
 
 _Mapping the pigeon complaints of New York City, 2010 - early 2016_
