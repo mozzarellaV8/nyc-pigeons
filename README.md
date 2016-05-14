@@ -1,3 +1,13 @@
+[basic mapping in R with NYC Open Data](nyc-pigeons#basic-mapping-in-r-with-nyc-open-data)
+
+[how this came about](nyc-pigeons#how-this-came-about)
+
+[further research](nyc-pigeons#further-research)
+
+[further thoughts](nyc-pigeons#further-thoughts)
+
+[sources and resources](nyc-pigeons#sources-and-resources)
+
 ### Basic Mapping in R with NYC Open Data
 
 _Mapping the pigeon complaints of New York City, 2010 - early 2016_
