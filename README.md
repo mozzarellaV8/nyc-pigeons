@@ -30,7 +30,7 @@ An example plot of Brooklyn -
 
 ![Brooklyn Pigeon Complain Coordinates](nyc311-Pigeons_files/figure-markdown_github/BK-1.png "Brooklyn Pigeon Complain Coordinates")
 
-Plots and process: [nyc311-Pigeons.md](https://github.com/mozzarellaV8/nyc-pigeons/blob/first/nyc311-Pigeons.md)
+All plots and process: [nyc311-Pigeons.md](https://github.com/mozzarellaV8/nyc-pigeons/blob/first/nyc311-Pigeons.md)
 
 ### how this came about~
 
