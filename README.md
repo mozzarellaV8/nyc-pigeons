@@ -6,6 +6,9 @@
 - [further thoughts](https://github.com/mozzarellaV8/nyc-pigeons#further-thoughts) 
 - [sources and resources](https://github.com/mozzarellaV8/nyc-pigeons#sources-and-resources)
 
+the meat: 
+- [process and plots](nyc311-Pigeons.md)
+
 ### Basic Mapping in R with NYC Open Data
 
 _Mapping the pigeon complaints of New York City, 2010 - early 2016_
@@ -27,7 +30,7 @@ An example plot of Brooklyn -
 
 ![Brooklyn Pigeon Complain Coordinates](nyc311-Pigeons_files/figure-markdown_github/BK-1.png "Brooklyn Pigeon Complain Coordinates")
 
-All plots and detailed process are here: [nyc311-Pigeons.md](https://github.com/mozzarellaV8/nyc-pigeons/blob/first/nyc311-Pigeons.md)
+Plots and process: [nyc311-Pigeons.md](https://github.com/mozzarellaV8/nyc-pigeons/blob/first/nyc311-Pigeons.md)
 
 ### how this came about~
 
