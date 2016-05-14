@@ -1,12 +1,10 @@
-[basic mapping in R with NYC Open Data](nyc-pigeons#basic-mapping-in-r-with-nyc-open-data)
+### contents
 
-[how this came about](nyc-pigeons#how-this-came-about)
-
-[further research](nyc-pigeons#further-research)
-
-[further thoughts](nyc-pigeons#further-thoughts)
-
-[sources and resources](nyc-pigeons#sources-and-resources)
+- [basic mapping in R with NYC Open Data](https://github.com/mozzarellaV8/nyc-pigeons#basic-mapping-in-r-with-nyc-open-data)
+- [how this came about](https://github.com/mozzarellaV8/nyc-pigeons#how-this-came-about)
+- [further research](https://github.com/mozzarellaV8/nyc-pigeons#further-research)
+- [further thoughts](https://github.com/mozzarellaV8/nyc-pigeons#further-thoughts) 
+- [sources and resources](https://github.com/mozzarellaV8/nyc-pigeons#sources-and-resources)
 
 ### Basic Mapping in R with NYC Open Data
 
