@@ -273,8 +273,8 @@ sources and resources
 
 - [NYC Open Data](https://nycopendata.socrata.com/)
 - [nyc.gov](http://www1.nyc.gov/site/planning/data-maps/open-data/districts-download-metadata.page)
+- my mentor Julian for my [Foundations of Data Science](https://www.springboard.com/workshops/data-science) class
 - [Flowing Data tutorials](http://flowingdata.com) - are really great.
 - [Data is Plural](https://tinyletter.com/data-is-plural)
-- my mentor Julian for my [Foundations of Data Science](https://www.springboard.com/workshops/data-science) class
 - [Open Street Map](http://openstreetmapdata.com/)
 - [I Quant NY](http://iquantny.tumblr.com/) - man, so good.
