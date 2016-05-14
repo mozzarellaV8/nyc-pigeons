@@ -3,39 +3,20 @@ Pigeons NYC
 <editor@mozzarella.website>
 May 4, 2016
 
-Mapping pigeon complaints of New York City, 2010 - early 2016
------------------------------------------------------------------
+Contents
+--------
 
-I came across a dataset in Jeremy Singer-Vine's [weekly email](https://tinyletter.com/data-is-plural), comprised of all reported rat sightings in New York City. Going further I found a *wealth of data* on complaints made to various NYC agencies, all through the 311 Service Requests system. [NYC Open Data](https://nycopendata.socrata.com/data) is a beautiful thing.
+- [a look at the data - Descriptors](https://github.com/mozzarellaV8/nyc-pigeons/blob/first/nyc311-Pigeons.md#a-look-at-the-data---Descriptors)
+- [Five Boroughs Floating](https://github.com/mozzarellaV8/nyc-pigeons/blob/first/nyc311-Pigeons.md#five-boroughs-floating)
+- [Five Borough Breakdown](https://github.com/mozzarellaV8/nyc-pigeons/blob/first/nyc311-Pigeons.md#five-borough-breakdown)
+- [Futher Thoughts](https://github.com/mozzarellaV8/nyc-pigeons/blob/first/nyc311-Pigeons.md#further-thoughts)
+- [Future Filtered Sets](https://github.com/mozzarellaV8/nyc-pigeons/blob/first/nyc311-Pigeons.md#future-filtered-sets)
+- [Coordinate Reference Systems](https://github.com/mozzarellaV8/nyc-pigeons/blob/first/nyc311-Pigeons.md#coordinate-reference-systems)
+- [sources and resources](https://github.com/mozzarellaV8/nyc-pigeons/blob/first/nyc311-Pigeons.md#sources-and-resources)
 
-Filtering the data from the source using Socrata's API - limiting the results to *311 Service Requests - contains 'pigeon'* - we have 3893 observations of 30 variables. Since [rats of New York have been amazingly well analyzed](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4157232/) - why not see what we can learn about pigeons?
 
-![New York isn't the only city with this problem.](http://pi.mozzarella.website/pigeon-rat.jpg)
-
-Anyways! Here is just some spatial EDA with the data - mostly to learn a bit about the maptools library and RMarkdown. It is still a work in progress and am hoping to refine spatial parameters and understanding in the coming weeks.
-
-Quick note on Coordinate Reference Systems (CRS) in shapefiles:
-
--   WGS84 EPSG 4326 - used by Google Earth, Open Street Map, most GPS Systems
-
--   WGS84 EPSG 3857 - used by Google Maps, Open Street Map. Mercator Projection.
-
--   NADS83 EPSG 4269 - used by nyc.gov and many other state/federal agencies.
-
-Also, [here](https://nycopendata.socrata.com/profile/mozzarella/hch9-rjwu) are a few more of my filtered sets of data from NYC Open Data. Also findable at [Socrata NYC](https://nycopendata.socrata.com/), username *mozzarella*. Again just some work in progress here! A little EDA - on the side - from my class [Foundations of Data Science](https://www.springboard.com/workshops/data-science).
-
-sources and resources
----------------------
-
--   [NYC Open Data](https://nycopendata.socrata.com/)
--   [nyc.gov](http://www1.nyc.gov/site/planning/data-maps/open-data/districts-download-metadata.page)
--   [Flowing Data](http://flowingdata.com)
--   [Data is Plural](https://tinyletter.com/data-is-plural)
--   my mentor Julian for my [Foundations of Data Science](https://www.springboard.com/workshops/data-science) class
--   [Open Street Map](http://openstreetmapdata.com/)
-
-a look at the data - descriptions
----------------------------------
+a look at the data - Descriptors
+--------------------------------
 
 ``` r
 pigeon <- read.csv("data/contains_pigeon.csv")
@@ -45,7 +26,7 @@ summary(pigeon$Descriptor)
     ##          N/A  Pigeon Odor Pigeon Waste 
     ##            1          312         3580
 
-Odor and Waste, eh? It'd be nice to make a map of these points wouldn't it? Maybe we can find where the highest density of pigeon shit in New York is. The dataset provides latitude and longitude coordinates for the location of each complaint - service request - filed. It also provides columns for Complaint Types and descriptions of these complaints - pretty fine by my (still learning) standards.
+Odor and Waste, eh? It'd be nice to make a map of these points wouldn't it? Maybe we can find where the highest density of pigeon shit in New York is. The dataset provides latitude and longitude coordinates for the location of each complaint (or service request) filed. It also provides columns for `Complaint Types` and `Descriptor`.
 
 I went on to break down the complaint description variables in order to assign lat/long coordinates to each type.
 
@@ -111,7 +92,7 @@ points(odorProj, pch = 1, col = "#698B2275", cex = 1.6)
 points(odorProj, pch = 1, col = "#6B8E2375", cex = 1.2)
 ```
 
-![](nyc311-Pigeons_files/figure-markdown_github/plot%20data-1.png)
+![plot 01](nyc311-Pigeons_files/figure-markdown_github/plot%20data-1.png)
 
 Goldenrod represents Waste, and the olivedrabs represent Odor. Plotted the pigeon odor points twice for two reasons:
 
@@ -129,7 +110,7 @@ points(wasteProj, pch = 20, col = "#00000030", cex = 0.8)
 points(odorProj, pch = 1, col = "#00000050", cex = 1.6)
 ```
 
-![](nyc311-Pigeons_files/figure-markdown_github/black%20and%20white-1.png)
+![plot 01 bw](nyc311-Pigeons_files/figure-markdown_github/black%20and%20white-1.png)
 
 OK! Maybe time to bring in some shapefiles. There are some great ones from nyc.gov with many parameters, but they do take quite some time to load. Also, they use a different CRS than Google Maps and [OpenStreetMap](https://www.openstreetmap.org/).
 
@@ -158,9 +139,9 @@ points(odor$Longitude, odor$Latitude,
        pch = 1, col = "#53868B75", cex = 1.4)
 ```
 
-![](nyc311-Pigeons_files/figure-markdown_github/plot%20with%20shp-1.png)<!-- -->
+![plot 02](nyc311-Pigeons_files/figure-markdown_github/plot%20with%20shp-1.png)
 
-![](nyc311-Pigeons_files/figure-markdown_github/unnamed-chunk-1-1.png)<!-- -->
+![plot 02 bw](nyc311-Pigeons_files/figure-markdown_github/unnamed-chunk-1-1.png)
 
 Five Borough Breakdown
 ----------------------
@@ -168,7 +149,6 @@ Five Borough Breakdown
 Going to start by layering the map a bit - adding in shapefiles for administrative, natural, and coastline boundaries.
 
 ``` r
-# reading in 3 shapefiles with New York State parameters
 # for each borough, will set bounding boxes accordingly
 # http://boundingbox.klokantech.com/
 
@@ -183,15 +163,10 @@ And also filter the coordinates for each complaint by borough.
 # assign coordinates by borough ---------------------------
 bk_odor <- filter(odor, odor$Borough == "BROOKLYN")
 bx_odor <- filter(odor, odor$Borough == "BRONX")
-mn_odor <- filter(odor, odor$Borough == "MANHATTAN")
-qn_odor <- filter(odor, odor$Borough == "QUEENS")
-si_odor <- filter(odor, odor$Borough == "STATEN ISLAND")
 
 bk_waste <- filter(waste, waste$Borough == "BROOKLYN")
 bx_waste <- filter(waste, waste$Borough == "BRONX")
-mn_waste <- filter(waste, waste$Borough == "MANHATTAN")
-qn_waste <- filter(waste, waste$Borough == "QUEENS")
-si_waste <- filter(waste, waste$Borough == "STATEN ISLAND")
+
 ```
 
 #### Brooklyn
@@ -221,25 +196,25 @@ points(bk_odor$Longitude, bk_odor$Latitude,
        pch = 1, col = "#CD262675", cex = 2.6)
 ```
 
-![](nyc311-Pigeons_files/figure-markdown_github/BK-1.png)<!-- -->
+![Brooklyn](nyc311-Pigeons_files/figure-markdown_github/BK-1.png)
 
 #### Queens
 
 Queens' bounding box could use some tightening or loosening up.
 
-![](nyc311-Pigeons_files/figure-markdown_github/QNS-1.png)<!-- -->
+![Queens](nyc311-Pigeons_files/figure-markdown_github/QNS-1.png)
 
 #### Manhattan
 
-![](nyc311-Pigeons_files/figure-markdown_github/MN-1.png)<!-- -->
+![Manhattan](nyc311-Pigeons_files/figure-markdown_github/MN-1.png)
 
 #### Bronx
 
-![](nyc311-Pigeons_files/figure-markdown_github/BX-1.png)<!-- -->
+![Bronx](nyc311-Pigeons_files/figure-markdown_github/BX-1.png)
 
 #### Staten Island
 
-![](nyc311-Pigeons_files/figure-markdown_github/SI-1.png)<!-- -->
+![Staten Island](nyc311-Pigeons_files/figure-markdown_github/SI-1.png)
 
 Will be tuning this up over time. Still working on what makes the information come through clearest, and also the tougher point of finding good questions to ask of the data.
 
@@ -279,3 +254,27 @@ Future Filtered Sets
 -   the **d's**: *damaged, dangling, dead, derelict, disorderly, dirty, dump*
 -   pigeon vs. rat
 -   pigeon vs. rat vs. street food vs. [Seamless](http://seamless.com)
+
+
+Coordinate Reference Systems
+-----------------------------
+
+In the future will be using `rgdal` and `sp` to properly project points. Quick notes on CRS:
+
+-   WGS84 EPSG 4326 - used by Google Earth, Open Street Map, most GPS Systems
+
+-   WGS84 EPSG 3857 - used by Google Maps, Open Street Map. Mercator Projection.
+
+-   NADS83 EPSG 4269 - used by nyc.gov and many other state/federal agencies.
+
+
+sources and resources
+---------------------
+
+- [NYC Open Data](https://nycopendata.socrata.com/)
+- [nyc.gov](http://www1.nyc.gov/site/planning/data-maps/open-data/districts-download-metadata.page)
+- [Flowing Data tutorials](http://flowingdata.com) - are really great.
+- [Data is Plural](https://tinyletter.com/data-is-plural)
+- my mentor Julian for my [Foundations of Data Science](https://www.springboard.com/workshops/data-science) class
+- [Open Street Map](http://openstreetmapdata.com/)
+- [I Quant NY](http://iquantny.tumblr.com/) - man, so good.
