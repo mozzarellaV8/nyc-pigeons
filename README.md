@@ -97,4 +97,5 @@ In regard to pigeons specifically, does the historic and high rise architecture 
 - [Data is Plural](https://tinyletter.com/data-is-plural)
 - my mentor Julian for my [Foundations of Data Science](https://www.springboard.com/workshops/data-science) class
 - [Open Street Map](http://openstreetmapdata.com/)
+- [I Quant NY](http://iquantny.tumblr.com/) - man, so good.
 
