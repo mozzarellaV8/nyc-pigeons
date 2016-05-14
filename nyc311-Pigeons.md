@@ -43,19 +43,15 @@ To check:
 
 ``` r
 head(odor)
-```
 
     ##    Descriptor  Borough Longitude Latitude
     ## 1 Pigeon Odor   QUEENS -73.83707 40.70811
     ## 2 Pigeon Odor    BRONX -73.82505 40.84501
     ## 3 Pigeon Odor BROOKLYN -73.92229 40.69525
-    ## 4 Pigeon Odor BROOKLYN -73.94684 40.59589
-    ## 5 Pigeon Odor   QUEENS -73.90589 40.70226
-    ## 6 Pigeon Odor BROOKLYN -74.00293 40.62462
+```    
 
 ``` r
 glimpse(waste)
-```
 
     ## Observations: 3,581
     ## Variables: 4
@@ -63,6 +59,7 @@ glimpse(waste)
     ## $ Borough    (fctr) QUEENS, QUEENS, QUEENS, QUEENS, QUEENS, BROOKLYN, ...
     ## $ Longitude  (dbl) -73.81459, -73.90734, -73.92513, -73.90734, -73.925...
     ## $ Latitude   (dbl) 40.67520, 40.77890, 40.73807, 40.77890, 40.73807, 4...
+```
 
 Five Boroughs Floating
 ----------------------
