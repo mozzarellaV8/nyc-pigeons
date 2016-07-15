@@ -40,7 +40,7 @@ Filtering the data from the source using Socrata's API - limiting the results to
 
 ![New York isn't the only city with this problem.](http://pi.mozzarella.website/pigeon-rat.jpg)
 
-### further research
+### Further Research
 
 to do:
 
@@ -56,7 +56,7 @@ to look into:
 - [Cosa Nosta News](http://www.cosanostranews.com/2014/07/spero-bred-racing-pigeons-and-gangsters.html) - hobbies of organized crime leaders. Bath Avenue, Bensonhurst. 
 - [Brooklyn In Flight](http://fort-greene.thelocal.nytimes.com/2010/01/15/jewels-of-the-rooftop/) - pigeon loft in Clinton Hill/Ft. Greene/Bed-Stuy. Also: Broadway Pigeons & Pet Supply at 1622A Broadway, Brooklyn. 
 
-### further thoughts
+### Further Thoughts
 
 ###### on pigeons:
 
