@@ -11,7 +11,7 @@ the meat:
 
 ### Basic Mapping in R with NYC Open Data
 
-_Mapping the pigeon complaints of New York City, 2010 - early 2016_
+_Mapping the pigeon complaints of New York City, 2010 - 2015_
 
 This is a little side project from my class 
 [Foundations of Data Science](https://www.springboard.com/workshops/data-science). It's done in R, to explore the spatial libraries and work with shapefiles, as well as publicly available data from New York City. 
