@@ -1,13 +1,15 @@
 ### contents
 
+meat: 
+- [process/maps/plots](nyc311-Pigeons.md)
+
+potatoes:
 - [basic mapping in R with NYC Open Data](https://github.com/mozzarellaV8/nyc-pigeons#basic-mapping-in-r-with-nyc-open-data)
 - [how this came about](https://github.com/mozzarellaV8/nyc-pigeons#how-this-came-about)
 - [further research](https://github.com/mozzarellaV8/nyc-pigeons#further-research)
 - [further thoughts](https://github.com/mozzarellaV8/nyc-pigeons#further-thoughts) 
 - [sources and resources](https://github.com/mozzarellaV8/nyc-pigeons#sources-and-resources)
 
-the meat: 
-- [process and plots](nyc311-Pigeons.md)
 
 ### Basic Mapping in R with NYC Open Data
 
